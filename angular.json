@@ -20,12 +20,23 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/css",
+              "src/assets/fonts",
+              "src/assets/images",
+              "src/assets/js",
+              "src/assets/media",
+              "src/assets/vendor"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
+
             ],
-            "scripts": []
+            "scripts": [
+            
+        
+            ]
           },
           "configurations": {
             "production": {

@@ -1,0 +1,49 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+  <div class="justifier">
+<h2 >A l'attention de Monsieur le directeur des ressources humaines</h2>
+
+
+    <h3>Objet: Demande de Congé : </h3>
+    <h5>réference : {{conge.id}}</h5>
+
+<p>Je vous informe par la présente que je souhaite bénéficier d'un congé pour la période allant du {{conge.date_debut | date: 'dd/MM/yyyy' }} jusqu'à {{conge.date_fin | date: 'dd/MM/yyyy' }} et ce pour un {{conge.motif}} .</p>
+<p>Je vous prie d'agréer,Madame,Monsieur ,l'assurance de mes sincéres salutations.</p>
+<!--Signature  : <tr>
+<strong>{{ conge.user.username }}</strong>!-->
+
+    
+                  
+                   <div *ngIf="showAdminBoard">
+                    <form (ngSubmit)="updateetat()" #f=ngForm  >
+                    <div class="form-group">
+                        <label>Etat</label>
+                        <select   class="form-control" [(ngModel)]="conge.etat" name="etat">
+                          <option value="accepté">accepté</option>
+                          <option value="refusé">refusé</option>
+                         
+                        </select>
+                      </div>
+                      <button  class="btn btn-success"   type="submit">
+                        reponse 
+                      </button>
+                      </form>
+                    </div>
+                  
+                   
+          <!--      <div class="justifier">
+                      <h3 class="decision">Décision de l'administration  : {{conge.etat}}</h3> -->  
+
+
+
+
+<button  class="btn btn-warning"    (click)="back()"><i class="fas fa-angle-double-left"></i> Retour </button>
+
+</div>

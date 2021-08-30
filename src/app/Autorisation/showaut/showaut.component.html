@@ -1,0 +1,49 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+  <div class="justifier">
+   
+    
+    
+        <h3>Demande d'autorisation: </h3>
+        <h5>réference : {{aut.id}}</h5>
+    
+    <p>à partir de  {{aut.debut | date: 'dd/MM/yyyy hh:mm' }} jusqu'à {{aut.fin | date: 'dd/MM/yyyy hh:mm' }} et ce pour un {{aut.motif}} .</p>
+    
+    <!--Signature  : <tr>
+    <strong>{{ aut.user_aut.username }}</strong>!-->
+    
+        
+                      
+                       <div *ngIf="showAdminBoard">
+                        <form (ngSubmit)="updateetat()" #f=ngForm  >
+                        <div class="form-group">
+                            <label>Etat</label>
+                            <select   class="form-control" [(ngModel)]="aut.etat" name="etat">
+                              <option value="accepté">accepté</option>
+                              <option value="refusé">refusé</option>
+                             
+                            </select>
+                          </div>
+                          <button  class="btn btn-success"   type="submit">
+                            reponse 
+                          </button>
+                          </form>
+                        </div>
+                      
+                       
+              <!--      <div class="justifier">
+                          <h3 class="decision">Décision de l'administration  : {{conge.etat}}</h3> -->  
+    
+    
+    
+    
+    <button  class="btn btn-warning"    (click)="back()"><i class="fas fa-angle-double-left"></i> Retour </button>
+    
+    </div>

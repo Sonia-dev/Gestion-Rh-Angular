@@ -1,0 +1,54 @@
+<div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+
+<div class="card car">
+
+  <div class="card car">
+      <h3>Modifier Employee </h3>
+  <form (ngSubmit)="update()" #f=ngForm> 
+      <div class="form-group"> 
+        <label for="nom">Nom:</label> 
+        <input name="nom_empl" type="text" id="nom_empl" class="form-control"  [(ngModel)]="employee.nom_empl"  >
+   </div>
+       
+   <div class="form-group"> 
+      <label for="nom">Prenom:</label> 
+      <input name="prenom_empl" type="text" id="prenom_empl" class="form-control"  [(ngModel)]="employee.prenom_empl"  >
+  </div>
+  <div class="form-group"> 
+      <label for="nom">Telephone:</label> 
+      <input name="telephone" type="text" id="telephone" class="form-control"  [(ngModel)]="employee.telephone"  >
+  </div>
+  <div class="form-group"> 
+    <label for="nom">date d embauche:</label> 
+    <input name="date_embauche" type="date" id="date_embauche" class="form-control"  [(ngModel)]="employee.date_embauche"  >
+</div>
+<div class="form-group"> 
+  <label for="nom">date de naissance :</label> 
+  <input name="date_naissance" type="date" id="date_naissance" class="form-control"  [(ngModel)]="employee.date_naissance"  >
+</div>
+<div class="form-group"> 
+  <label for="nom">diplome:</label> 
+  <input name="diplome" type="text" id="diplome" class="form-control"  [(ngModel)]="employee.diplome"  >
+</div>
+<div class="form-group"> 
+  <label for="nom">email:</label> 
+  <input name="email" type="email" id="email" class="form-control"  [(ngModel)]="employee.email"  >
+</div>
+  
+  
+  
+                        <button class="btn btn-warning" >Update</button> 
+            </form>
+    </div>
+  
+  
+    
+</div>

@@ -1,0 +1,18 @@
+
+.italic {
+    font-style: italic small;
+    width: 1000px;
+    border: 1px solid #000000;
+  }
+  .justifier{
+    text-align: justify;
+    text-justify: inter-word;
+    background-color: white;
+  }
+  .decision{
+    text-overflow: ellipsis;
+    color: green;
+  }
+  .select {
+    width:500px;
+  }

@@ -1,0 +1,77 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div class="col-md-12">
+<div class="class">
+
+<form>
+   
+  <div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Liste <b>des demandes </b></h2>
+            </div>
+            <div class="col-sm-7">
+             
+
+</div>
+</div>
+</div>
+</div>
+ 
+    <table class="table">
+    <thead> 
+    <tr>
+    
+      <th> Identifiant</th>
+        <th> date de debut</th>
+      
+        <th>date de fin</th>
+        <th>motif</th>
+        <th>Employee</th>
+      <th>Decision </th>
+
+       
+    </tr>
+    </thead>
+    <tbody >
+      
+    <tr *ngFor="let emp of conges " >
+    
+        <td *ngIf="emp.user.username === currentUser.username " ><a  [routerLink]="[emp.id]"> {{emp.id}} </a></td>
+        <td *ngIf="emp.user.username === currentUser.username ">{{emp.date_debut | date: 'dd/MM/yyyy'}}</td>
+        <td *ngIf="emp.user.username === currentUser.username ">{{emp.date_fin | date: 'dd/MM/yyyy'}}</td>
+        <td *ngIf="emp.user.username === currentUser.username ">{{emp.motif }}</td>
+       
+       <td *ngIf="emp.user.username === currentUser.username ">{{emp.user.username}}</td>
+       <td *ngIf="emp.user.username === currentUser.username ">{{emp.etat}}</td>
+
+   
+    </tr>
+    <tr *ngFor="let emp of conges " >
+    
+      <td  *ngIf="showAdminBoard" ><a  [routerLink]="[emp.id]"> {{emp.id}} </a></td>
+      <td *ngIf="showAdminBoard" >{{emp.date_debut | date: 'dd/MM/yyyy'}}</td>
+      <td *ngIf="showAdminBoard" >{{emp.date_fin | date: 'dd/MM/yyyy'}}</td>
+      <td *ngIf="showAdminBoard" >{{emp.motif }}</td>
+     
+     <td *ngIf="showAdminBoard" >{{emp.user.username}}</td>
+     <td *ngIf="showAdminBoard" >{{emp.etat}}</td>
+
+ 
+  </tr>
+
+
+    </tbody>
+    </table>
+    </form>
+    </div>
+    </div>
+ 

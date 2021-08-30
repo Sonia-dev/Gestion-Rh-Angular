@@ -1,0 +1,59 @@
+<div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+
+  <div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-5">
+                <h2>Liste <b>des contrats </b></h2>
+            </div>
+            <div class="col-sm-7">
+             
+
+</div>
+</div>
+</div>
+</div>
+<table class="table table-striped">
+
+
+<thead> 
+<tr>
+    <th> Type  </th>
+   
+    <th>Durée  </th>
+    <th>Date de debut </th>
+    <th>Date de fin  </th>
+    <th>Salaire </th>
+    <th>Fonction </th>
+    <th>Employee </th>
+
+
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let dep of contrats ">
+    <td>{{dep.type}}</td>
+    <td>{{dep.duree}}</td>
+    <td>{{dep.date_debut}}</td>
+    <td>{{dep.date_fin}}</td>
+    <td>{{dep.salaire}}</td>
+    <td>{{dep.fonction}}</td>
+    <td> {{dep.employee.id_empl}}||{{dep.employee.nom_empl}} {{ dep.employee.prenom_empl}}</td>
+   
+ 
+
+   
+</tr>
+
+</tbody>
+
+
+</table>

@@ -1,0 +1,68 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+
+<div class="card car">
+  <h3 class="titre">Demande d'autorisation</h3>
+
+ 
+
+<form [formGroup]="autForm" (ngSubmit)="onSubmit()" >
+ 
+  
+    
+ 
+
+
+  <div class="form-group">
+      <label class="etat">a partir de  :</label>
+      <input
+        type="datetime-local"
+        id="debut"
+        class="au-input au-input--full"
+        formControlName="debut"
+      
+      />
+    </div>
+    <div class="form-group">
+      <label class="etat">jusqu'au  :</label>
+      <input
+      type="datetime-local"
+        id="fin"
+        class="au-input au-input--full"
+        formControlName="fin"
+      
+      />
+    </div>
+    <div class="form-group">
+      <label class="motif">pour la raison de  :</label>
+      <input
+        type="text"
+        id="motif"
+        class="au-input au-input--full"
+        formControlName="motif"
+      
+      />
+    </div>
+
+
+
+
+
+<button  class="btn btn-success"   type="submit">
+  Envoyer demande 
+</button>
+</form>
+</div>
+
+<ng-template #loggedOut>
+Please login.
+</ng-template>
+
+

@@ -1,0 +1,173 @@
+
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div><div >
+    <h3>Create employee</h3>
+   
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()" >
+   
+   
+      <div class="form-group">
+
+        <label for="nom_empl">Nom : </label>
+        <input
+          type="text"
+          id="nom_empl"
+          class="form-control"
+          required
+          formControlName="nom_empl" 
+        />
+</div >
+      <div class="form-group">
+        <label>Prénom :</label>
+        <input
+          type="text"
+          required
+          id="prenom_empl"
+          class="form-control"
+          formControlName="prenom_empl"
+        
+        />
+      </div>
+      <div class="form-group">
+        <label>Telephone</label>
+        <input
+          type="text"
+          id="telephone"
+          required
+          class="form-control"
+          formControlName="telephone"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>Date de naissance</label>
+        <input
+          type="date"
+          id="date_naissance"
+          class="form-control"
+          required
+          formControlName="date_naissance"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>Date d'embauche '</label>
+        <input
+          type="date"
+          id="date_naissance"
+          class="form-control"
+          required
+          formControlName="date_embauche"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>Lieu de naissance</label>
+        <input
+          type="text"
+          id="lieu_naissance"
+          class="form-control"
+          required
+          formControlName="lieu_naissance"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>Diplome</label>
+        <input
+          type="text"
+          id="diplome"
+          required
+          class="form-control"
+          formControlName="diplome"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input
+          type="text"
+          id="email"
+          class="form-control"
+          required
+          formControlName="email"
+     
+        />
+      </div>
+    
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">situation</label>
+            <select formControlName="situation"   class="form-control" required >
+              <option value="Celibataire">Celibataire</option>
+              <option value="marié">marié</option>
+        
+            </select>
+    
+</div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1"><h2><p>Departement</p></h2></label>
+  
+        <select class="form-control" (change)="onSelectFile($event)" formControlName="departments"   required >     
+          <option *ngFor="let dep of departments" value="{{ dep.id_dep }}">
+            {{ dep.nom_dep }}
+          </option>
+        </select>
+      </div>
+
+
+      <div formGroupName="contrat">
+        <div class="form-group"> 
+         <div>  <label for="exampleInputEmail1"><h2><p>Contrat</p></h2></label></div>
+          <label class="col-sm-2 control-label" for="type">
+            Type :
+          </label >
+        <input type="text" id="type"  class="form-control" formControlName="type"  required>
+        <label for="exampleInputEmail1" >
+          duree :
+        </label>
+        <input type="text" id="duree"  class="form-control" formControlName="duree"  required>
+        <label  for="exampleInputEmail1">
+          date_debut :
+        </label>
+      
+        <input type="date" id="date_debut"   class="form-control" formControlName="date_debut"  required>
+  
+        <label for="exampleInputEmail1" >
+          date_fin :
+        </label>
+    
+        <input type="date" id="date_fin"   class="form-control" formControlName="date_fin"  required>
+ 
+        <label for="exampleInputEmail1" >
+          salaire :
+        </label>
+  
+        <input type="text" id="salaire"   class="form-control" formControlName="salaire"  required>
+   
+        <label for="exampleInputEmail1" >
+          fonction :
+        </label>
+
+        <input type="text" id="fonction"  class="form-control" formControlName="fonction"  required>
+ 
+
+
+
+      </div> 
+      </div>
+      <button  class="btn btn-success"   type="submit">
+        Add 
+      </button>
+    </form>
+   
+  </div>
+  

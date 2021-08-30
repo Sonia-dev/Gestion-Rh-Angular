@@ -1,0 +1,31 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div class="col-md-6 offset-md-3">
+
+    <h3>Create departement</h3>
+    <form (ngSubmit)="onSubmit()">
+
+      
+   
+ 
+        
+    <div class="form-group">
+    <label>nom_dep</label>
+    <input type="text" id="nom_dep" class="form-control"
+    [(ngModel)] ="dep.nom_dep" name="nom_dep" required>
+</div>
+
+
+
+      <button  class="btn btn-success" type="submit">Add </button>
+    </form>
+  
+    </div>
+

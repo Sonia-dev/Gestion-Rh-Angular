@@ -1,0 +1,85 @@
+<div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+  <div> 
+    <div class="card car"></div>
+  </div>
+
+
+
+<body>
+<div class="container-xl">
+<form>
+
+<div class="table-responsive">
+    <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2>Employee <b>Management</b></h2>
+                </div>
+                <div class="col-sm-7">
+                    <button class="btn btn-danger"       (click)="exporterenpdf()">Export en PDF </button>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="input-group">
+  <div class="form-outline">
+<input   type="search" [(ngModel)]="nom_empl" name="nom_empl" (input)="Search()"/> 
+</div>
+</div>
+<table class="table table-striped table-hover">
+<thead> 
+<tr>
+
+    <th (click) = "sort('Nom')"> Nom&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('prenom')"> prenom&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('telephone')"> telephone&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('datedembauche')"> date d'embauche&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('datedenaissance')"> date de Naissance&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('diplome')"> Diplome&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('email')"> Email&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('lieunaissance')"> Lieu de naissance&nbsp;<i class="fa fa-sort"></i></th>
+
+    <th (click) = "sort('situation')"> Situation&nbsp;<i class="fa fa-sort"></i></th>
+    <th (click) = "sort('departement')"> Departement&nbsp;<i class="fa fa-sort"></i></th>
+    <th > Action </th>
+</tr>
+</thead>
+<tbody>
+<tr *ngFor="let emp of employees | orderBy: key: reverse | paginate: { itemsPerPage: 5, currentPage: p };">
+    <td><a [routerLink]="[emp.id_empl]" >{{emp.nom_empl}} </a> </td>
+    <td>{{emp.prenom_empl}}</td>
+    <td>{{emp.telephone}}</td>
+    <td>{{emp.date_embauche}}</td>
+    <td>{{emp.date_naissance}}</td>
+    <td>{{emp.diplome}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.lieu_naissance}}</td>
+ 
+    <td>{{emp.situation}}</td>
+    <td> {{emp.departements.nom_dep}}</td>
+    <td><button class="btn btn-danger"><span class="fa fa-trash" (click)="supprimer(emp.id_empl)"></span></button></td>
+    <td><button class="btn btn-warning"><span class="fa fa-edit"(click)="modifier(emp.id_empl)"></span></button></td>
+    
+    
+</tr>
+</tbody>
+
+</table>
+
+</div>
+
+</form>
+
+<pagination-controls (pageChange)="p= $event"></pagination-controls>
+</div>
+</body>

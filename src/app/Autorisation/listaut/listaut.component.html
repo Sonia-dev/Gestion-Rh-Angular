@@ -1,0 +1,80 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+
+
+
+<div class="class">
+
+    <form>
+       
+            
+      <div class="table-wrapper">
+        <div class="table-title">
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2>Liste <b>des demandes</b></h2>
+                </div>
+                <div class="col-sm-7">
+                
+
+</div>
+</div>
+</div>
+</div>
+     
+        <table class="table">
+        <thead> 
+        <tr>
+        
+          <th> Identifiant</th>
+            <th> date de debut</th>
+          
+            <th>date de fin</th>
+            <th>motif</th>
+            <th>Employee</th>
+          <th>Decision </th>
+    
+           
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let emp of aut ">
+            <td *ngIf="emp.user_aut.username === currentUser.username "><a  [routerLink]="[emp.id]"> {{emp.id}} </a></td>
+            <td *ngIf="emp.user_aut.username === currentUser.username "><a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.debut | date: 'dd/MM/yyyy hh:mm'}}</a></td>
+            <td *ngIf="emp.user_aut.username === currentUser.username "> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.fin | date: 'dd/MM/yyyy hh:mm'}}</a></td>
+            <td *ngIf="emp.user_aut.username === currentUser.username "> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.motif }}</a></td>
+           
+           <td *ngIf="emp.user_aut.username === currentUser.username "><a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.user_aut.username}}</a></td>
+          
+           <td *ngIf="emp.user_aut.username === currentUser.username "> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.etat}}</a></td>
+    
+       
+        </tr>
+        <tr *ngFor="let emp of aut ">
+          <td *ngIf="showAdminBoard"><a  [routerLink]="[emp.id]"> {{emp.id}} </a></td>
+          <td *ngIf="showAdminBoard"><a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.debut | date: 'dd/MM/yyyy hh:mm'}}</a></td>
+          <td *ngIf="showAdminBoard"> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.fin | date: 'dd/MM/yyyy hh:mm'}}</a></td>
+          <td *ngIf="showAdminBoard"> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.motif }}</a></td>
+         
+         <td *ngIf="showAdminBoard"><a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.user_aut.username}}</a></td>
+        
+         <td *ngIf="showAdminBoard"> <a  [ngStyle]= "{'color': emp.etat == 'accepté' ? 'green' : 'red' }"    >{{emp.etat}}</a></td>
+  
+     
+      </tr>
+
+
+      
+
+
+        </tbody>
+        </table>
+        </form>
+        </div>

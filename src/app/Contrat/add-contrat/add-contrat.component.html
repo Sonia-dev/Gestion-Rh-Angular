@@ -1,0 +1,83 @@
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div> 
+  <div class="card car"></div>
+</div>
+<div >
+    <h3>Create contrat</h3>
+    <form [formGroup]="contratForm" (ngSubmit)="onSubmit()" >
+      <div class="form-group">
+        <label for="type">type</label>
+        <input
+          type="text"
+          id="nom_empl"
+          class="form-control"
+          formControlName="type" 
+        />
+
+</div >
+
+      <div class="form-group">
+        <label>duree</label>
+        <input
+          type="text"
+          id="duree"
+          class="form-control"
+          formControlName="duree"
+        
+        />
+      </div>
+      <div class="form-group">
+        <label>date_debut</label>
+        <input
+          type="date"
+          id="date_debut"
+          class="form-control"
+          formControlName="date_debut"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>date_fin</label>
+        <input
+          type="date"
+          id="date_fin"
+          class="form-control"
+          formControlName="date_fin"
+     
+        />
+        </div>
+      
+      
+      <div class="form-group">
+        <label>salaire</label>
+        <input
+          type="text"
+          id="salaire"
+          class="form-control"
+          formControlName="salaire"
+     
+        />
+      </div>
+      <div class="form-group">
+        <label>fonction</label>
+        <input
+          type="text"
+          id="fonction"
+          class="form-control"
+          formControlName="fonction"
+     
+        />
+      </div>
+
+
+      <button  class="btn btn-success"   type="submit">
+        Add 
+      </button>
+    </form>
+  </div>
+  
